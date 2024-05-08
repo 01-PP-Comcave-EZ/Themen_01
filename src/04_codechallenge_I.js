@@ -11,3 +11,8 @@ Geben Sie die Summe der Zahlen in die Konsole aus:
 
 const prompt = require('prompt-sync')({sigint: true});
 
+let number1=prompt("Erster Summand?: ");
+let number2=prompt("Zweiter Summand?: ");
+let summe=Number(number1)+Number(number2);
+console.log("Die Summe der Zahlen ist: "+ summe);
+
