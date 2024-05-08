@@ -16,3 +16,4 @@ let number2=prompt("Zweiter Summand?: ");
 let summe=Number(number1)+Number(number2);
 console.log("Die Summe der Zahlen ist: "+ summe);
 
+// Done.
