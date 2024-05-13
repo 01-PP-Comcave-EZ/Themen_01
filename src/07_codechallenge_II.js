@@ -20,7 +20,7 @@ Alter 13-17 // Cola
 /******* Vorüberlegung / SWITCH|CASE 2 *******/
 
 // const cond = true;
-// const value = 2;
+// const value = 10;
 
 // switch (cond) {
 //     case (value == 1):
@@ -33,13 +33,26 @@ Alter 13-17 // Cola
 //         console.log("Value hat einen anderen Wert.");
 //         break;
 // }
-let firstName = prompt("Vorname?: ");
-let age = prompt("Alter?: ");
 
-function outputNameAge(firstName, age) {
-    console.log(outputStr);
+const prompt = require('prompt-sync')({sigint: true});
+
+
+let firstName = prompt("Name?: ");
+let age = parseInt(prompt("Alter?: "));
+
+switch (true) {
+  case age >= 0 && age <= 5:
+    console.log(`${firstName} trinkt Milch.`);
+    break;
+  case age >= 6 && age <= 12:
+    console.log(`${firstName} trinkt Saft.`);
+    break;
+  case age >= 13 && age <= 17:
+    console.log(`${firstName} trinkt Cola.`);
+    break;
+  case age >= 18:
+    console.log(`${firstName} trinkt Wein.`);
+    break;
+  default:
+    console.log("Ungültiges Alter eingegeben.");
 }
-// const prompt = require('prompt-sync')({sigint: true});
-// outputNameAge(prompt("Vorname?: "),prompt("Alter?: "));
-
-
