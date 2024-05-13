@@ -16,7 +16,7 @@
 /***** Funktionen 02a *****/
 // 2a. Parametrisierung + Datenübergabe von INNEN
 
-outputNames();
+// outputNames();
 
 function outputNames() 
 {
@@ -31,3 +31,28 @@ function outputNames()
 }
 
 // console.log(firstName); // Fehler: scope!
+
+/***** Funktionen 02b *****/
+// 2b. Parametrisierung + Datenübergabe von AUSSEN
+
+// outputNames2("Ich"); // Argument --> Daten für Parameter
+// outputNames2("Jan");
+
+// function outputNames2(firstName) // Parameter
+// {
+//     console.log("Hallo, "+firstName+"!");
+// }
+
+/***** Funktionen 02c *****/
+// 2c. Mehrere Parameter / Argumente
+
+// outputNames3("Maxine","Mützerich");
+
+const prompt = require('prompt-sync')({sigint: true});
+outputNames3(prompt("Vorname?: "),prompt("Nachname?: "));
+
+function outputNames3(firstName, familyName) 
+{
+    console.log("Hallo, "+firstName+" "+familyName+"!");
+} 
+
