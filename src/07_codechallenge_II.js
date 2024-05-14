@@ -44,16 +44,16 @@ let age = parseInt(prompt("Alter?: "));
 
 switch (cond) {
   case age >= 0 && age <= 5:
-    console.log(`${firstName} trinkt Milch.`);
+    console.log(firstName + " trinkt Milch.");
     break;
   case age >= 6 && age <= 12:
-    console.log(`${firstName} trinkt Saft.`);
+    console.log(firstName + " trinkt Saft.");
     break;
   case age >= 13 && age <= 17:
-    console.log(`${firstName} trinkt Cola.`);
+    console.log(firstName + " trinkt Cola.");
     break;
   case age >= 18:
-    console.log(`${firstName} trinkt Wein.`);
+    console.log(firstName + " trinkt Wein.");
     break;
   default:
     console.log("Ungültiges Alter eingegeben.");
