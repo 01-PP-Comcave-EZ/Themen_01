@@ -5,24 +5,43 @@
 0. a+b | a-b | a*b | a/b  --> Ergebnis c 
 
 1. Dateneingabe + -überprüfung :  
-2. Auswahl Rechenart : 
-3. Fkt. Grundrechenarten : 
+2. Auswahl Rechenart : check!
+3. Fkt. Grundrechenarten : check!
 4. Ausgabe in Konsole : check!
 */
+
+const prompt = require('prompt-sync')({sigint: true});
 
 const ERROR_STR_DIV = "Division durch 0 nicht zulässig!"
 const ERROR_STR_GEN = "Irgendwas ging schief!";
 
+startApp();
+function startApp() {
+	output(calc(getNum1(),getNum2(),getOp()));
+}
+
+function getNum1() {
+	return parseInt(prompt("1. Zahl: "));
+}
+
+function getNum2() {
+	return parseInt(prompt("2. Zahl: "));
+}
+
+function getOp() {
+	return prompt("Operator: ");
+}
+
 // agreement : "+","-","*",":","/"
 // module: calculator | tests:
 
-output(calc(3,2,"+"));
-output(calc(3,2,"-"));
-output(calc(3,2,"*"));
-output(calc(3,2,":"));
-output(calc(3,2,"/"));
-output(calc(3,0,"/"));
-output(calc(3,2,"#?!"));
+// output(calc(3,2,"+"));
+// output(calc(3,2,"-"));
+// output(calc(3,2,"*"));
+// output(calc(3,2,":"));
+// output(calc(3,2,"/"));
+// output(calc(3,0,"/"));
+// output(calc(3,2,"#?!"));
 
 function calc(a,b,op) {
 	switch (op) {
@@ -35,7 +54,6 @@ function calc(a,b,op) {
 		case ":":
 		case "/":
 			return div(a,b)
-	
 		default:
 			return ERROR_STR_GEN
 	}
