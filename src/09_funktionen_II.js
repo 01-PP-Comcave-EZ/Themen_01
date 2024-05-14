@@ -10,12 +10,18 @@
 4. Ausgabe in Konsole : check!
 */
 
+const ERROR_STR_DIV = "Division durch 0 nicht zulässig!"
+
 // module: division a / b | test:
 
 function div(a,b) 
 {
-	return a/b
+	if (b==0) {
+			return ERROR_STR_DIV; // Ausnahme
+			} 		
+		return a/b; // Regel
 }
+
 
 // module: multiplication a * b |  test:
 
@@ -29,7 +35,7 @@ function mult(a, b)
 
 function sub(a, b) 
 {
-	return a-b;
+		return a-b;
 }
 
 
@@ -52,7 +58,8 @@ output(mult(3,-2));
 output(sub(3,0));
 output(sub(0,2));
 output(div(9,3));
-output(div(110,11))
+output(div(110,11));
+output(div(2,0));
 function output(outputData) {
 	console.log(outputData);
 }
