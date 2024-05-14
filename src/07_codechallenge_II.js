@@ -35,12 +35,14 @@ Alter 13-17 // Cola
 // }
 
 const prompt = require('prompt-sync')({sigint: true});
+const cond = true;
+
 
 
 let firstName = prompt("Name?: ");
 let age = parseInt(prompt("Alter?: "));
 
-switch (true) {
+switch (cond) {
   case age >= 0 && age <= 5:
     console.log(`${firstName} trinkt Milch.`);
     break;
