@@ -55,23 +55,43 @@ function output(outputStr) {
 // word1,word2, .... wordN :: Semantische Struktur
 // arr[0],arr[1] ... arr[n-1] :: Numerische Struktur (0,1,2,3 ... n)
 // --> Transformation semantisches Problem --> numerisches Problem
+// output(getSentenceArr2(["Ich","bin","die","coole","Maxine","Mützerich"]));
+// function getSentenceArr2(arr) {
+    // const GAP = " ";
+    // const PUNCT = ".";
+    // let str = "";
+//     for (let i=0; i < arr.length; i++) 
+//     {
+//         if (i==arr.length-1) 
+//         {
+//             str += arr[i] + PUNCT; // Ausnahme
+//         } else
+//         {
+//             str += arr[i] + GAP  // Regel
+//         }
+//     } 
+//     return str;   
+// }
+
+// 2 Variante: Struktur erzeugen + trimmen()
+
 output(getSentenceArr2(["Ich","bin","die","coole","Maxine","Mützerich"]));
-function getSentenceArr2(arr) {
+function getSentenceArr2(arr) 
+{
     const GAP = " ";
     const PUNCT = ".";
     let str = "";
-    for (let i=0; i < arr.length; i++) 
-    {
-        if (i==arr.length-1) 
-        {
-            str += arr[i] + PUNCT; // Ausnahme
-        } else
-        {
-            str += arr[i] + GAP  // Regel
-        }
-    } 
-    return str;   
+//     for (let i=0; i < arr.length; i++) 
+//         { 
+//             str += arr[i] + GAP; 
+//             }
+//     return str.trim()+ PUNCT;
+//  }   
+
+// 3. Variante: Ausnutzen von generischen Funktionen...
+return arr.join(GAP)+PUNCT;
 }
+
 
 /***  */
 
@@ -107,11 +127,11 @@ Solange die Variable existiert, bleibt dieser erhalten
 hier: Verkettung eines Strings // Transponierung
 */
 
-let a = ""; // Anfangswert - leerer String
-for (let i=0; i < 5; i++) {
-    a=a+"Test";
-    output("Inhalt von a: "+a);
-}
+// let a = ""; // Anfangswert - leerer String
+// for (let i=0; i < 5; i++) {
+//     a=a+"Test";
+//     output("Inhalt von a: "+a);
+// }
 
 
 
