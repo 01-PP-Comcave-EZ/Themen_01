@@ -59,9 +59,18 @@ output(getSentenceArr2(["Ich","bin","die","coole","Maxine","Mützerich"]));
 function getSentenceArr2(arr) {
     const GAP = " ";
     const PUNCT = ".";
-    for (let i=0; i < arr.length; i++) {
-      output(arr[i]);        
-    }
+    let str = "";
+    for (let i=0; i < arr.length; i++) 
+    {
+        if (i==arr.length-1) 
+        {
+            str += arr[i] + PUNCT; // Ausnahme
+        } else
+        {
+            str += arr[i] + GAP  // Regel
+        }
+    } 
+    return str;   
 }
 
 /***  */
