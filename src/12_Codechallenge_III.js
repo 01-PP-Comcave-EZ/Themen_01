@@ -19,7 +19,16 @@ output(getSentence(["Ich","bin"],"E"));
 output(getSentence(["Ich","hätt","gern","die","Platt","von","dene","zwei","diwodaso","Spass","mache,","habbe","Sie","die"],"Q"));
 
 function getSentence(arr,op) {
-   // ???
+const GAP = " ";
+const PUNCT = getPunct(op);
+let str = "";
+for (let i = 0; i < arr.length; i++)  // i = Schleifenindex
+    {
+        str += arr[i] + GAP; // Regel
+    }
+
+    return str;
+
 }
 
 
